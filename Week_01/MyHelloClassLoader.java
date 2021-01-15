@@ -9,7 +9,7 @@ public class MyHelloClassLoader extends ClassLoader {
 
     public static void main(String[] args) {
         try {
-            Class<?> clz = new MyClassLoader().findClass("Hello");
+            Class<?> clz = new MyHelloClassLoader().findClass("Hello");
             clz.getMethod("hello").invoke(clz.newInstance());
         } catch (InstantiationException | NoSuchMethodException | InvocationTargetException | ClassNotFoundException | IllegalAccessException e) {
             e.printStackTrace();
